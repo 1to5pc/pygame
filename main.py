@@ -16,6 +16,19 @@ screenwidth, screenheight = (480, 640)
 screen = pygame.display.set_mode((screenwidth, screenheight))
 
 
+class ScrollingBackground:
+
+    def __init__(self, screenheight, imagefile):
+
+        self.img = pygame.image.load(imagefile)
+
+        self.coord = [0, 0]
+
+        self.coord2 = [0, -screenheight]
+
+        self.y_original = self.coord[1]
+
+        self.y2_original = self.coord2[1]
 
 # Set the framerate
 
