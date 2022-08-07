@@ -16,7 +16,7 @@ screen = pygame.display.set_mode((600, 480))
 
 # Load the background image here. Make sure the file exists!
 
-bg = pygame.image.load(os.path.join("./", "background.png"))
+   bg = pygame.image.load(os.path.join("./", "background.jpg"))
 
 pygame.mouse.set_visible(0)
 
