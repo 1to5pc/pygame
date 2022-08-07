@@ -51,7 +51,7 @@ class ScrollingBackground:
      surface.blit(self.img, self.coord2)
 # Set the framerate
 
-framerate = 20
+framerate = 60
 
 
 
