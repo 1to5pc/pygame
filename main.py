@@ -118,3 +118,5 @@ while True:
     StarField.Show(screen)
 
     pygame.display.update()
+
+    Hero = HeroShip(screenheight, screenwidth, "ship.png")
