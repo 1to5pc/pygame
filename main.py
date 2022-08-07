@@ -11,28 +11,43 @@ pygame.init()  # initialize pygame
 
 clock = pygame.time.Clock()
 
-screen = pygame.display.set_mode((600, 480))
+screenwidth, screenheight = (480, 640)
+
+screen = pygame.display.set_mode((screenwidth, screenheight))
+
+
+
+# Set the framerate
+
+framerate = 60
+
+
+
+# Set the background scrolling speed
+
+bg_speed = 100
+
 
 
 # Load the background image here. Make sure the file exists!
 
-bg = pygame.image.load(os.path.join("./", "background.jpg"))
+StarField = ScrollingBackground(screenheight, "background.jpg")
 
 pygame.mouse.set_visible(0)
 
 pygame.display.set_caption('Space Age Game')
 
 
-# fix indentation
 
+# fix indentation
 
 while True:
 
-    clock.tick(60)
-
-    screen.blit(bg, (0, 0))
+    time = clock.tick(framerate)/1000.0
 
     x, y = pygame.mouse.get_pos()
+
+
 
 
     for event in pygame.event.get():
@@ -41,5 +56,11 @@ while True:
 
             sys.exit()
 
+
+    # Set new Background Coordinates and update the screen
+
+    StarField.UpdateCoords(bg_speed, time)
+
+    StarField.Show(screen)
 
     pygame.display.update()
