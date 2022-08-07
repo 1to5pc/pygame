@@ -121,8 +121,8 @@ while True:
     pygame.display.update()
 
 Hero = HeroShip(screenheight, screenwidth, "ship.png")
-x, y = pygame.mouse.get_pos()
+#x, y = pygame.mouse.get_pos()
 
-Hero.UpdateCoords(x)
+#Hero.UpdateCoords(x)
 
 Hero.Show(screen)
