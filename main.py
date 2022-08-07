@@ -71,6 +71,7 @@ class HeroShip:
     def UpdateCoords(self, x):
 
         self.left = x-self.shape.get_width()/2
+
 # Set the framerate
 
 framerate = 60
@@ -79,7 +80,7 @@ framerate = 60
 
 # Set the background scrolling speed
 
-bg_speed = 100
+bg_speed = 80
 
 
 
