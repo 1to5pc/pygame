@@ -94,8 +94,6 @@ pygame.display.set_caption('Space Age Game')
 
 
 
-# fix indentation
-
 while True:
 
     time = clock.tick(framerate)/1000.0
