@@ -12,7 +12,6 @@ pygame.init()  # initialize pygame
 clock = pygame.time.Clock()
 
 screenwidth, screenheight = (480, 640)
-
 screen = pygame.display.set_mode((screenwidth, screenheight))
 
 
