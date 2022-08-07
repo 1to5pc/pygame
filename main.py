@@ -43,6 +43,12 @@ class ScrollingBackground:
             self.coord[1] = self.y_original
     
             self.coord2[1] = self.y2_original
+    
+    def Show(self, surface):
+
+    surface.blit(self.img, self.coord)
+
+    surface.blit(self.img, self.coord2)
 # Set the framerate
 
 framerate = 60
