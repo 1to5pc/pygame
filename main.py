@@ -30,6 +30,19 @@ class ScrollingBackground:
 
         self.y2_original = self.coord2[1]
 
+def UpdateCoords(self, speed_y, time):
+
+    distance_y = speed_y * time
+
+    self.coord[1] += distance_y
+
+    self.coord2[1] += distance_y
+
+    if self.coord2[1] >= 0:
+
+        self.coord[1] = self.y_original
+
+        self.coord2[1] = self.y2_original
 # Set the framerate
 
 framerate = 60
